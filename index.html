@@ -8,9 +8,28 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Varela+Round&amp;display=swap'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Manjari:wght@700&amp;display=swap'>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Noto+Sans&display=block" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<!--回到顶部-->
+
+<!-- 回到顶部 -->
   <link rel="stylesheet" href="./src/static/css/style.css">
+
 <style>
+
+/* 封面下滑 */
+.cover {
+    position: relative;
+    height: 92vh;
+    background: url('nn.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    cursor: pointer;
+}
 
 /* 链接 */
 a:link {color:#6b7a75; text-decoration:none;}      /* 未访问链接*/
@@ -24,18 +43,8 @@ font-family: "hanyi";
 src: url("./fonts/汉仪篆书繁.ttf") format("truetype");
 }
 
-@font-face {
-font-family: "fan";
-src: url("./fonts/古越軒粗明體繁.ttf") format("truetype");
-}
 
 </style>
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -43,7 +52,57 @@ src: url("./fonts/古越軒粗明體繁.ttf") format("truetype");
   <title>越来越老的建筑业</title>
   <link rel="stylesheet" href="parallax.css">
 </head>
+
 <body>
+
+<!-- 导航栏 -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#section1">01</a>
+  <a href="#section2">02</a>
+  <a href="#section3">03</a>
+</div>
+
+<span style="font-size:30px; cursor:pointer; padding-left: 10px" onclick="openNav()">&#9776;</span>
+<script src="./js/sidenav.js"></script>
+
+<!-- 封面 -->
+    <div class="cover">
+        <div class="scroll-down" onclick="scrollDown()">
+            &#8595;
+        </div>
+    </div>
+
+    <div style="background: #f0f0f0;">
+    </div>
+
+    <script>
+        function scrollDown() {
+            window.scroll({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+<!-- 轮播 -->
+  <div class="slider">
+    <div class="slider-items">
+        <div class="slider-item">
+          <img src="./img/i1.jpg" style="width:100%; height: 100%;">
+        </div>
+        <div class="slider-item">
+          <img src="./img/i2.jpg" style="width:100%;height: 100%">
+        </div>
+        <div class="slider-item">
+          <img src="./img/i3.jpg" style="width:100%;height: 100%">        
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+    <button class="slider-button slider-button-prev">←</button>
+    <button class="slider-button slider-button-next">→</button>
+  </div>
+  <script src="./js/lunbo.js"></script>
 
   <section class="section section1">
 
@@ -58,10 +117,9 @@ src: url("./fonts/古越軒粗明體繁.ttf") format("truetype");
       &nbsp;&nbsp;&nbsp;&nbsp;合肥瑶海区的工程承包商钱弘术也有相同的感受，他的团队有二十多个工人，四十岁到五十岁的工人占八成，还有不少三十多岁的工人转行跑出租、进厂或是送外卖。“现在的年轻人都不愿意进这个行业了。”钱老板这几年开始为招工发愁，谁都希望有“新鲜血液”，但按现在的行情，他们这些承包商们都只招得到年纪稍大的工人。</p>
       <p style="text-align: left;">
       &nbsp;&nbsp;&nbsp;&nbsp;诚然，建筑行业“老龄化”是不争的事实。据江苏省建筑工人实名制信息管理服务平台统计，目前江苏860万建筑业从业人员中，有建筑工人560万人。其中，18岁-40岁、40岁-50岁、50岁-65岁的建筑工人占比分别约为29%、23%、48%。另有文献数据显示，2007年建筑业一线作业人员平均年龄为33.2岁，2017年为43.1岁，10年时间，平均年龄增加了10岁。</p>
-<div class="infogram-embed" data-id="fd5145a6-7a5a-42c4-af8c-bfcd14a4021e" data-type="interactive" data-title="Teal Light"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px">
   </section>
 
-  <div class="img1">
+  <div class="img1" id="section1">
     <div class="heading">
       <div class="ani1">
       <span style="font-size: 55px;"><p style="font-size: 100px">01</p></span>
@@ -78,7 +136,8 @@ src: url("./fonts/古越軒粗明體繁.ttf") format("truetype");
       <p style="text-align: left;">
       &nbsp;&nbsp;&nbsp;&nbsp;改革开放后，城市产业结构调整，大批农业剩余劳动力得以向二三产业和城镇转移。</p>
       <p style="text-align: left;">
-      &nbsp;&nbsp;&nbsp;&nbsp;数据显示，1989年中国农村共有2.7亿劳动力，而农业在精耕细作的基础上，亦只需1亿劳动力。离开农村、外出做工成为非农业劳动力的唯一选择。在此背景下，“民工潮”拉开了序幕。</p>
+      &nbsp;&nbsp;&nbsp;&nbsp;数据显示，1989年中国农村共有2.7亿劳动力，而农业在精耕细作的基础上，亦只需1亿劳动力。1.7亿非农劳动力中，有8000万农民正面临乡镇企业发展下的“隐性失业”，离开农村、外出做工成为他们唯一的选择。在此背景下，“民工潮”拉开了序幕。</p>
+      <iframe src="https://dycharts.com/xshow/index.html?id=c_89e2a68b09d0ca3fa48605a329b00213" width="600" height="510" scrolling="no" frameborder="0" align=""></iframe>
       <p style="text-align: left;">
       &nbsp;&nbsp;&nbsp;&nbsp;这批前往外地务工的农民工当中，年轻人是中流砥柱。李晓华在1995年跟亲戚一起去皖北地区当木工，据他回忆，老家巢湖市当时有不少人外出当装修工，没几个年轻小伙子留在村里种地。根据社会科学院农村发展研究所针对全国11个省区93个村进行的调查结果，1986年外出农民工中，18岁至25岁的青年占到总数的60.1%。</p>
       <p style="text-align: left;">
@@ -89,6 +148,7 @@ src: url("./fonts/古越軒粗明體繁.ttf") format("truetype");
       &nbsp;&nbsp;&nbsp;&nbsp;李晓华所说不虚，90年代初期，江苏省农委政策研究处副处长孙国贵曾说，由于插秧、收割机械没有解决，在江南水乡，一个强劳力至多只能种5亩田，1亩田纯收入100元，一年才收入500元。而同时期山西省大同市工地的建筑工的月工资已经达到600元。</p>
       <p style="text-align: left;">
       &nbsp;&nbsp;&nbsp;&nbsp;城市化的列车带着“李晓华们”狂飙突进，农民工的工资也跟着水涨船高。近20年来，在农民工较易进入的行业中，建筑业当属性价比“最高”的行业。数据显示，农民务工收入呈现逐年上涨趋势，2022年城镇私营单位中，建筑业年平均工资为60918元，高于农林牧渔业的42605元；同时高于住宿和餐饮行业、批发和零售业，房地产业等八个行业。</p>
+      <iframe src="https://e.infogram.com/6c73ef3b-b164-4a9a-93d6-af3adbe4e843?src=embed" title="平均工资" width="1109" height="470" scrolling="no" frameborder="0" style="border:none;" allowfullscreen="allowfullscreen"></iframe>
       <p style="text-align: left;">
       &nbsp;&nbsp;&nbsp;&nbsp;在过去的20年甚至40年间，每个城市都在大兴土木，铁路穿越雪域高原，高桥横跨天堑南北。中国一代代的建筑人用脊梁扛起了中国发展的步伐，中国的发展也带动着建筑业一路向前。</p>
       <p style="text-align: left;">
@@ -98,7 +158,7 @@ src: url("./fonts/古越軒粗明體繁.ttf") format("truetype");
 
   </section>
 
-  <div class="img2">
+  <div class="img2" id="section2">
     <div class="heading">
       <span style="font-size: 55px;"><p style="font-size: 100px">02</p></span>
       <span style="font-size: 50px;"><p><b>90后，宁肯进厂打螺丝，不想爬楼挣高薪</b></p></span>
@@ -114,11 +174,12 @@ src: url("./fonts/古越軒粗明體繁.ttf") format("truetype");
     <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;可以说，工资拖欠问题是当前建筑行业的一大痛点，尽管政府出台了一系列政策来保护建筑工人的权益，但在落实上仍存在问题。当建筑业工人的尊重需求难以被满足，付出劳动所应得的工资难以被保障时，不仅会降低行业内工人的幸福感，也很难再吸纳更多的新鲜血液。</p>
     <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;2022年，中国从事建筑业的农民工比重为17.7%，比上年下降1.3个百分点。建筑业行业内工人的流失与行业外年轻人不愿进，不仅仅因为工资拖欠。</p>
     <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;“不可否认，工地的工作强度大、压力大，脏累，工作辛苦又不体面。”包工头钱弘术表示，现在工地上的年轻工人多集中在大型机械操作等有技术要求的工种，传统瓦、水电和木班组工人普遍年纪较大，但在一定程度上，技术工种也缺乏吸引力，“年轻人如果学技术工，前期需要投入的时间和精力成本很高，这一点就‘劝退’了很多准备从事技术工种的年轻人。”</p>
-    <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;随着经济模式发展变迁，物流、中介、餐饮、文娱等相关城市新兴产业不断涌现，大量新型劳务及轻体力劳动岗位的产生拓宽了年轻一代的职业选择空间。</p>     
+    <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;随着经济模式发展变迁，物流、中介、餐饮、文娱等相关城市新兴产业不断涌现，大量新型劳务及轻体力劳动岗位的产生拓宽了年轻一代的职业选择空间。</p>   
+    <img src="./img/1.svg" style="height: 500px">
     <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;此外，建筑业的科技发展也让密集产业不那么“密集”。目前，部分工地正在应用3D打印技术，模块化和预制化生产大大减少了工地需要的劳动力数量。一些年轻建筑人早已经成为“灰领”甚至“白领”，不再是工地上“吃大苦、受大累”的蓝领，这也在一定程度上让建筑业的变老“肉眼可见”。</p> 
   </section>
 
-<div class="img3">
+<div class="img3" id="section3">
   <div class="heading">
       <span style="font-size: 55px;"><p style="font-size: 100px">03</p></span>
       <span style="font-size: 50px;"><p><b>中国建筑业如何引来“新鲜血液”？</b></p></span>
@@ -134,11 +195,13 @@ src: url("./fonts/古越軒粗明體繁.ttf") format("truetype");
   <p style="text-align: left;">
       &nbsp;&nbsp;&nbsp;&nbsp;日前，我国经济已由高速增长阶段转向高质量发展阶段，正处于转变发展方式、优化经济结构、转换增长动力的关键时期。建筑业作为经济发展阵地的支撑产业，如何引来“新鲜血液”对其进一步发展至关重要。</p>
   <p style="text-align: left;">
-      &nbsp;&nbsp;&nbsp;&nbsp;尝试去理解年轻人的择业心理，针对性解决行业现存问题，才能留住行业内的他们，吸纳行业外的他们。2021年9月，智联招聘发布《2021Z世代职场现状与趋势调研报告》（z世代通常是指1995年至2009年出生的一代人），对Z世代的职业追求给出了清晰画像：在求职因素方面，Z世代对福利待遇的看重程度明显高于前辈们，工作环境和个人成长逐渐成为Z世代人群考量职业的重要因素。</p>
+      &nbsp;&nbsp;&nbsp;&nbsp;尝试去理解年轻人的择业心理，针对性解决行业现存问题，才能留住行业内的他们，吸纳行业外的他们。2021年9月，智联招聘发布《2021Z世代职场现状与趋势调研报告》（Z世代通常是指1995年至2009年出生的一代人），对Z世代的职业追求给出了清晰画像：在求职因素方面，Z世代对福利待遇的看重程度明显高于前辈们，工作环境和个人成长逐渐成为Z世代人群考量职业的重要因素。</p>
+  <img src="./img/1.gif" style="width: 800px">
   <p style="text-align: left;">
       &nbsp;&nbsp;&nbsp;&nbsp;除了吃穿住等基本条件外，Z世代对工作强度、加班时长、办公环境等因素的重视明显高于95前群体。数据显示，房地产/建筑业的Z世代对工作感到满意的比例仅占21.1%，劳动强度大、工作时间长、工作环境差，都是导致行业内年轻人“退场”的重要因素，也是阻碍行业外年轻人进入建筑业的大山。另外，权益保障也是年轻人不愿进建筑业的一大潜在动因。只有在基础保障上绵绵用力、久久为功，年轻人的职业归属感和幸福感才能得以提升。</p>
   <p style="text-align: left;">
       &nbsp;&nbsp;&nbsp;&nbsp;如今，“个人成长”成为越来越多年轻人选择职业时的重要考量因素，47.0%的95后认为“公司提供很多学习机会，能够在工作中学到新技能，不断提升自我”对其有吸引力。对此，建筑行业应建立健全产业工人培训、培养、管理和激励制度，拓宽成才空间，促进建筑工人走向职业化。行业生态不断规范化，不仅能提升建筑行业的社会认同度，也能让年轻人感到建筑业是有价值有前途的行业。</p>
+  <iframe src="https://e.infogram.com/c1b0c5fb-6da6-43f3-a503-e670a4f0f4ca?src=embed" title="求职看重因素" width="1182" height="937" scrolling="no" frameborder="0" style="border:none;" allowfullscreen="allowfullscreen"></iframe>
   <p style="text-align: left;">
       &nbsp;&nbsp;&nbsp;&nbsp;当建筑工人成为一个有安全感、价值感和成就感的职业，自然会吸引越来越多的年轻人加入，建筑行业后继乏人的窘境也能得以破除。</p>
 </section>
@@ -158,7 +221,7 @@ src: url("./fonts/古越軒粗明體繁.ttf") format("truetype");
 <script src="./src/static/js/jquery-3.3.1.js"></script>
 <script src="./src/static/js/script.js"></script>
 
-<div class="footer" style="text-align: center; font-family: 'unicon'; font-size: 15px">
+<div class="footer" style="text-align: center; font-family: 'unicon'; font-size: 15px; background-color: #000;">
 <a>2023 © 安徽大学新闻传播学院</a></div>
 </body>
 </html>
