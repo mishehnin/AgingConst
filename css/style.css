@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+body, html {
+  cursor: none;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 2em;
+  color: #fff;
+}
+span link.{
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+}
+.img{ /* 一般图片格式 */
+  min-height: 250px;
+  min-width: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.img1 {
+  background-image: url('https://img1.imgtp.com/2023/07/15/Nogs51HG.jpg');
+  min-height: 1000px;
+  background-size: cover;
+  color: #fff;
+}
+.img2 {
+  background-image: url('https://img1.imgtp.com/2023/07/15/WqgSJk89.jpg');
+  min-height: 1000px;
+  background-size: cover;
+}
+.img3 {
+  background-image: url('https://img1.imgtp.com/2023/07/15/ydg3Ksno.jpg');
+  min-height: 1000px;
+  background-size: cover;
+}
+.img1, .img2, .img3 {
+  position: relative;
+  opacity: 0.8;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.heading {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: Abel, serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 15px;
+}
+
+/* 其他 */
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+.sectiona{
+  padding: 50px 80px;
+  color: rgb(245, 245, 245);
+}
+.section1 {
+  background-color: #000;
+}
+.section2 {
+  background-color: #000;
+}
+.section3 {
+  background-color: #000;
+}
+h1 {
+  font-family: Abel, serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+}
+h2 {
+  font-family: Abel, serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+}
+p {
+  font-family: Abel, serif;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-left: 125px;
+  margin-right: 125px;
+  margin-bottom: 25px;
+}
+#p1 {
+  font-family: Abel, serif;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  line-spacing: 20px;
+  margin-left: 66px;
+  margin-right: 66px;
+  margin-bottom: 25px;
+}
+#p2 { /* 分工 */
+  text-transform: capitalize;
+  left: 50%;
+}
+#footer {  /* 下方链接 */
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  text-align: center;
+}
+@media only screen and (min-width: 300px) {
+  span {
+    line-height: 1.6em;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .img1, .img2, .img3 {
+    background-attachment: scroll;
+  }
+}
+
+.ani1 {
+animation: fadeInAnimation ease 5s;
+animation-iteration-count: 1; /*设置动画播放次数*/
+animation-fill-mode: forwards; /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
+}
+
+@keyframes fadeInAnimation {
+0% {
+opacity: 0; /*设置不透明度*/
+}
+25% {
+opacity: 0.24;
+}
+50% {
+opacity: 0.6;
+}
+75% {
+opacity: 0.74;
+}
+100% {
+opacity: 1;
+}
+}
+
+/*轮播图*/
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.slider-items {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-item {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(0,0,0,0);
+    color: #fff;
+    border: none;
+    font-size: 40px;
+}
+
+.slider-button-prev {
+    left: 10px;
+}
+
+.slider-button-next {
+    right: 10px;
+}
+
+
+/* 导航栏 */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 77px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
