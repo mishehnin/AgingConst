@@ -25,18 +25,18 @@ span link.{
   margin-top: 30px;
 }
 .img1 {
-  background-image: url('https://img1.imgtp.com/2023/07/15/Nogs51HG.jpg');
+  background-image: url('https://s1.locimg.com/2023/10/02/a6edf0cc43188.jpg');
   min-height: 1000px;
   background-size: cover;
   color: #fff;
 }
 .img2 {
-  background-image: url('https://img1.imgtp.com/2023/07/15/WqgSJk89.jpg');
+  background-image: url('https://s1.locimg.com/2023/10/02/2bf0457778154.jpg');
   min-height: 1000px;
   background-size: cover;
 }
 .img3 {
-  background-image: url('https://img1.imgtp.com/2023/07/15/ydg3Ksno.jpg');
+  background-image: url('https://s1.locimg.com/2023/10/02/d8386a31fe2bf.jpg');
   min-height: 1000px;
   background-size: cover;
 }
@@ -232,4 +232,3 @@ opacity: 1;
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
